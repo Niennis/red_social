@@ -11,12 +11,30 @@
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
-  
   <body>
+    <h1 id='holaMundo'> </h1>
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script> 
-    <script src="assets/js/materialize.min.js"></script>     
+    <script src="assets/js/materialize.min.js"></script>   
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyA11xvSCkk7JLjgqr7HlrvPuNiW1yRydok",
+        authDomain: "labcraft-market.firebaseapp.com",
+        databaseURL: "https://labcraft-market.firebaseio.com",
+        projectId: "labcraft-market",
+        storageBucket: "",
+        messagingSenderId: "657357250509"
+      };
+      firebase.initializeApp(config);
+
+      var holaMundo = document.getElementById('holaMundo');
+      var dbRef = firebase.database().ref().child('text');
+      dbRef.on('value', snap => holaMundo.innerText = snap.val());
+    </script>  
     <script src="assets/js/app.js"></script>
   </body>  
 </html>
