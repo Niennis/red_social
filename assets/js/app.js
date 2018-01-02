@@ -22,3 +22,5 @@ $(document).ready(function(){
     }
   })
 })
+//inicializaciones materialize//
+$(".button-collapse").sideNav();
