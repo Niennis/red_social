@@ -46,31 +46,25 @@
             <br>
             <div class="row">
               <div class="col s6 m6 l6">
-                <!-- Modal Trigger -->
+                <!-- Modal Login-Register -->
                 <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login<i class="fas fa-user"></i></a>
-                <!-- Modal Login -->
-                <div id="modal1" class="modal">
-                  <div class="modal-content">
-                    <h4>Modal Header</h4>
-                    <p>A bunch of text</p>
-                  </div>
-                  <div class="modal-footer">
-                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-                  </div>
-                </div>
-              </div>
-            <div class="col s6 m6 l6">
-              <!-- Modal Trigger -->
-              <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Register</a>
-              <!-- Modal Register -->
-              <div id="modal1" class="modal">
-                <div class="modal-content">
-                  <h4>Modal Header</h4>
-                  <p>A bunch of text</p>
-                </div>
-                <div class="modal-footer">
-                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-                </div>
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Register</a>
+                
+                  <!-- Modal content -->
+                  <div id="modal1" class="modal">
+                    <div class="modal-content">
+                      
+                      <input id="txtEmail" type="email" placeholder="Email">
+                      <input type="password" id="txtPassword" placeholder="Contraseña">
+                    </div>
+                    <div class="modal-footer">
+                      
+                      <button id="btnLogin" class="btn btn-action" >Login</button>
+                      <button id="btnSignUp" class="btn btn-secondary" >Registrar</button>
+                      <button id="btnLogout" class="btn btn-action hide" >Logout</button>
+      
+      </div>
+    </div>
               </div>
             </div>
           </div>
