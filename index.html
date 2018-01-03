@@ -14,96 +14,98 @@
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
   <body>
-
     <header>
       <div class="container-fluid">
-      <div class="row ">
-        <div class="col s12 m12">
-          <!--Navbar-->
-          <nav>
-            <div class="nav-wrapper teal accent-2">
-             <a href="#!" class="brand-logo">Lab Craft's</a> 
-              <ul class="right hide-on-med-and-down">
-                <li><a href="sass.html"><i class="fas fa-home"></i></a></li> <!--Inicio-->
-                <li><a href="badges.html"><i class="fas fa-heart"></i></a></li> <!--Favoritos-->
-                 <li><a href="collapsible.html"><i class="fas fa-shopping-bag"></i></a></li> <!--Tienda-->
-                <li><a href="collapsible.html"><i class="fas fa-user"></i></a></li> <!--Perfil-->
-
-                  
-                <li><a href="mobile.html"><i class="fas fa-shopping-cart"></i></a></li> <!--Carro-->
-              </ul>
-            </div>
-         </nav>
-         </div>
+        <div class="row ">
+          <div class="col s12 m12">
+            <!--Navbar-->
+            <nav>
+              <div class="nav-wrapper teal accent-2">
+              <a href="#!" class="brand-logo">Lab Craft's</a> 
+                <ul class="right hide-on-med-and-down">
+                  <li><a href="sass.html"><i class="fas fa-home"></i></a></li> <!--Inicio-->
+                  <li><a href="badges.html"><i class="fas fa-heart"></i></a></li> <!--Favoritos-->
+                  <li><a href="collapsible.html"><i class="fas fa-shopping-bag"></i></a></li> <!--Tienda-->
+                  <li><a href="collapsible.html"><i class="fas fa-user"></i></a></li> <!--Perfil-->
+                  <li><a href="mobile.html"><i class="fas fa-shopping-cart"></i></a></li> <!--Carro-->
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
     </header>
     <section class="container-fluid fondo">
       <div class="row">
         <div class="col s12 m6 offset-m3">
-
-           <div class="card-panel teal accent-2 inicio">
+          <div class="card-panel teal accent-2 inicio">
             <h1>Bienvenido</h1>
             <p>Toda la artesanía del mundo en un solo lugar</p>
             <p>Mira,compra o aprende con Lab Craft's</p>
             <br>
 
             <div class="col s6 m6">
-             <button class="btn waves-effect waves-light btn modal-trigger waves-light" href="#modal1 type="submit" name="action">Inicia Sesión
-             <i class="fas fa-user"></i>
+              <button class="btn waves-effect waves-light btn modal-trigger waves-light" href="#modal1" type="submit" name="action">Inicia Sesión
+              <i class="fas fa-user"></i>
             <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>-->
              <!-- Modal Structure -->
             <div id="modal1" class="modal">
-            <div class="modal-content">
-              <h4>Modal Header</h4>
-              <p>A bunch of text</p>
-           </div>
-           <div class="modal-footer">
-           <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+              <div class="modal-content">
+                <h4>Modal Header</h4>
+                <p>A bunch of text</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+              </div>
+            </div>
           </div>
+          <div class="col s6 m6"></div>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Regístrate
+              <i class="material-icons right">Send</i>
+            </button>
           </div>
-             </div>
-            <div class="col s6 m6"></div>
-             <button class="btn waves-effect waves-light" type="submit" name="action">Regístrate
-             <i class="material-icons right">send</i>
-
-             
-
-  </button>
-           </div>
         </div>
       </div>
-     <article class="container-fluid">
-      <div class="row">
-        <div class="col s12 m4">
-          
-        </div>
-      </div>
-       
-     </article>
     </section>
 
+    <section id="newsfeed" class="container">
+      <div class="row">
+        <div class="col s12 m6 l6 offset-m3 offset-l3 jaja">
+          <textarea class="txt" id="comment" placeholder="Añade un comentario..."></textarea>
+          <form action="#">
+            <div class="file-field input-field">
+              <div class="btn">
+                <span><i class="fa fa-image"></i></span>
+                <input type="file" value="upload" id="fileBtn" multiple>
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" >
+              </div>              
+            </div>          
+          </form>
+<!--<input type="file" value="upload" id="fileBtn">-->
+          <img src="" alt="">
 
+          <button type="submit" id="btn" class="btn btn-action right">Enviar</button>            
+          
+          <!--New post-->
+        </div>
+      </div>
+    </section>
+    <section class="container" id="post"></section>
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script> 
-    <script src="assets/js/materialize.min.js"></script>   
+    <script src="assets/js/materialize.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyA11xvSCkk7JLjgqr7HlrvPuNiW1yRydok",
-        authDomain: "labcraft-market.firebaseapp.com",
-        databaseURL: "https://labcraft-market.firebaseio.com",
-        projectId: "labcraft-market",
-        storageBucket: "",
-        messagingSenderId: "657357250509"
-      };
-      firebase.initializeApp(config);
-
-      var holaMundo = document.getElementById('holaMundo');
-      var dbRef = firebase.database().ref().child('text');
-      dbRef.on('value', snap => holaMundo.innerText = snap.val());
-    </script>  
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <script src="assets/js/app.js"></script>
   </body>  
 </html>
