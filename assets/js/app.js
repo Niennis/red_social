@@ -23,8 +23,7 @@ $(document).ready(function(){
     var task = storageRef.put(file);
   });
 
-  //codigo a ejecutar
-
+  //Para crear un post
   $('#btn').click(function(){
     var comentario = $('#comment').val();
     $('#comment').val("");
