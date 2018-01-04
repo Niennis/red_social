@@ -73,12 +73,12 @@ $(document).ready(function(){
   });*/
 
   //Para crear un post
-  $('#btn').click(function(){
+  $('#sendBtn').click(function(){
     var comentario = $('#comment').val();
     $('#comment').val("");
       
     var contenedor = $('#post');
-    contenedor.append('<img class="uploadedImg" src="' + path + '" alt=" ">' + '<p>' + comentario + '</p><i class= "fa fa-trash trash"></i><i class = "fa fa-heart heart"></i>');
+    contenedor.append('<div class="posts row"><div class="col s12 m12 l12"><img id="uploadImg" src="img/no-image.png"' + '<p>' + comentario + '</p><i class= "fa fa-trash trash"></i><i class = "fa fa-heart heart"></i></div></div>');
   })
 
   $('#hide').click(function(){
@@ -104,18 +104,18 @@ $(document).ready(function(){
    // }
    console.log(mail);
   })
-  
+  var urlLarge = "none";
   var dataBase = firebase.database().ref('Images');
   $('#fileBtn').change(function(){
     if(this.files && this.files[0]){
-      var file = new fileReader();
-      file.onload = function(){
+      var file = new FileReader();
+      file.onload = function(e){
         dataBase.push({
-          urlLarge:e.target.result,
-          url:file
+          urlLarge:e.target.result
         });
-        $('')
-      }
+        $('#uploadImg').attr('src',urlLarge)
+      };
+      file.readAsDataURL(this.files[0]);
     }
   });
 

@@ -36,22 +36,42 @@ h1{
   background-color: white;
 }
 
-#btn:hover, .btnPhoto:hover {
-	background-color: teal;
+#sendBtn{
+  margin: 10px;
 }
 
-#btn:focus, textarea:focus{
+#fileBtn:hover, #sendBtn:hover {
+  background-color: turquoise;
+}
+
+#sendBtn:focus, textarea:focus{
 	outline: none;
+}
+
+.logoImg{
+  height: 10vh;
+  padding: 0 1vh;
+}
+
+#newsfeed{
+  background-image: url(../../assets/img/fabric.jpg);
+  width: 100%;
+  height: 100%;
+}
+
+.posts{
+  border: 1px solid orange;
+  margin: 10px;
 }
 
 .addPost{
   border: 1px solid greenyellow;
-  background-color: rgba(192, 245, 240, 0.644);
+  background-color: rgb(255, 255, 255);
 }
 .uploadedImg{
   width: 100%;
 }
-.fa-trash, .fa-heart{
+.trash, .heart{
   float: right;
   margin: 10px;
 }
