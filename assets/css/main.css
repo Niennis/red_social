@@ -5,7 +5,7 @@
 body{
   font-family: 'Courgette', cursive;
 }
-.fondo{
+.bg{
   background-image:url(../6074583145_8e219f8378_b.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -17,13 +17,10 @@ body{
 .row{
   margin-bottom: 0;
 }
-.inicio{
+.start{
   margin-top: 30%;
 }
 h1{
-  text-shadow: 1px 1px 2px black; 
-}
-p{
   text-shadow: 1px 1px 2px black; 
 }
 .txt {
@@ -36,21 +33,25 @@ p{
 	border: none;
   margin: 0 auto;
   resize: none;
-  border: 1px solid red;  
+  background-color: white;
 }
 
 #btn:hover, .btnPhoto:hover {
-	background-color: #5590A6;
+	background-color: teal;
 }
 
 #btn:focus, textarea:focus{
 	outline: none;
 }
 
-.jaja{
+.addPost{
   border: 1px solid greenyellow;
+  background-color: rgba(192, 245, 240, 0.644);
 }
-
 .uploadedImg{
   width: 100%;
+}
+.fa-trash, .fa-heart{
+  float: right;
+  margin: 10px;
 }

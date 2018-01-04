@@ -59,17 +59,18 @@ $(document).ready(function(){
   //Para subir fotos
   var fileBtn = $('#fileBtn');
 
-  var path="";
+  var path="";/*
   fileBtn.change(function(e){
     var file = e.target.files[0];        
-    var storageRef = firebase.storage().ref();
+    var storageRef = firebase.storage().ref('mis_fotos/' + file.name);
     var spaceRef = storageRef.child('mis_fotos/' + file.name);
     storageRef.child('mis_fotos/' + file.name).getDownloadURL().then(function(url){
       path = url;
     }).catch(function(error) {
 
     });
-  });
+    var upload = storageRef.put(file);
+  });*/
 
   //Para crear un post
   $('#btn').click(function(){
@@ -77,7 +78,7 @@ $(document).ready(function(){
     $('#comment').val("");
       
     var contenedor = $('#post');
-    contenedor.append('<div class="row"><div class="col s12 m6 l6 offset-m3 offset-l3">' + '<img class="uploadedImg" src="' + path + '" alt=" ">' + '<p>' + comentario + '</p><i class= "fa fa-trash trash"></i><i class = "fa fa-heart heart"></i></div><div>');
+    contenedor.append('<img class="uploadedImg" src="' + path + '" alt=" ">' + '<p>' + comentario + '</p><i class= "fa fa-trash trash"></i><i class = "fa fa-heart heart"></i>');
   })
 
   $('#hide').click(function(){
@@ -103,6 +104,23 @@ $(document).ready(function(){
    // }
    console.log(mail);
   })
-    
+  
+  var dataBase = firebase.database().ref('Images');
+  $('#fileBtn').change(function(){
+    if(this.files && this.files[0]){
+      var file = new fileReader();
+      file.onload = function(){
+        dataBase.push({
+          urlLarge:e.target.result,
+          url:file
+        });
+        $('')
+      }
+    }
+  });
+
+
+
+
 });   
   
