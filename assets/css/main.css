@@ -5,7 +5,7 @@
 body{
   font-family: 'Courgette', cursive;
 }
- .fondo{
+.fondo{
   background-image:url(../6074583145_8e219f8378_b.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -14,7 +14,6 @@ body{
 .row .col {
   padding: 0;
 }
-
 .row{
   margin-bottom: 0;
 }
@@ -27,7 +26,6 @@ h1{
 p{
   text-shadow: 1px 1px 2px black; 
 }
-
 .txt {
 	width: 100%;
   height: 8vh;
@@ -38,8 +36,7 @@ p{
 	border: none;
   margin: 0 auto;
   resize: none;
-  border: 1px solid red;
-  
+  border: 1px solid red;  
 }
 
 #btn:hover, .btnPhoto:hover {
@@ -54,3 +51,6 @@ p{
   border: 1px solid greenyellow;
 }
 
+.uploadedImg{
+  width: 100%;
+}
