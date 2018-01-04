@@ -89,7 +89,20 @@ $(document).ready(function(){
     $('h1').show();
   })
 
+  // Esconder y mostrar páginas
+  $('#newsfeed, #post').hide();
 
+  var mail = $('#txtEmail').val();
+  var pass = $('#txtPassword').val();
+  $('#btnLogin, #btnSignUp').click(function(){
+    //if(email != "" && pas != ""){
+      $('#home').hide();
+      $('#newsfeed, #post').show();  
+      var overlay = $('.modal-overlay');
+      overlay.css('background','transparent');
+   // }
+   console.log(mail);
+  })
     
 });   
   
