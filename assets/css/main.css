@@ -9,7 +9,7 @@ body{
   background-image:url(../6074583145_8e219f8378_b.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 90vh;
 }
 .row .col {
   padding: 0;
@@ -18,7 +18,7 @@ body{
   margin-bottom: 0;
 }
 .start{
-  margin-top: 30%;
+  margin-top: 20%;
 }
 h1{
   text-shadow: 1px 1px 2px black; 
@@ -35,38 +35,47 @@ h1{
   resize: none;
   background-color: white;
 }
-
 #sendBtn{
-  margin: 10px;
+  margin: 2vh;
 }
-
+.input-field{
+  padding: 0 2vh;
+}
 #fileBtn:hover, #sendBtn:hover {
   background-color: turquoise;
 }
-
 #sendBtn:focus, textarea:focus{
 	outline: none;
 }
-
 .logoImg{
   height: 10vh;
   padding: 0 1vh;
 }
-
 #newsfeed{
   background-image: url(../../assets/img/fabric.jpg);
-  width: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100%;
 }
-
 .posts{
-  border: 1px solid orange;
-  margin: 10px;
+  background-color: white;  
+  border: 1px solid white;
+  border-radius: 3px;
+  margin: 2vh;
 }
-
+.user{
+  width: 10vh;
+}
+.creation{
+  width: 90%;
+}
 .addPost{
-  border: 1px solid greenyellow;
+  border-radius: 3px;
+  border: 1px solid white;
   background-color: rgb(255, 255, 255);
+  margin: 2vh auto;
 }
 .uploadedImg{
   width: 100%;
@@ -87,7 +96,7 @@ h1{
 }
 .jay{
   width: 30vh;
-  border-style: : 5px solid white;
+  border-style: 5px solid white;
 }
 .text-contain{
   margin-top: -246px;

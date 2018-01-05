@@ -73,12 +73,52 @@ $(document).ready(function(){
   });*/
 
   //Para crear un post
-  $('#sendBtn').click(function(){
+
+  var file = "";
+  $('#sendBtn').click(function(){/*
+    var uploadedImg = $('<img id="uploadedImg" src="img/no-image.png">');*/
+/*
+    var dataBase = firebase.database().ref('Images');
+    $('#fileBtn').change(function(){
+      if(this.files && this.files[0]){
+        file = new FileReader();
+        file.onload = function(e){
+          var url = e.target.result;
+          dataBase.push({
+            url:e.target.result
+          });
+          $('#uploadImg').attr('src',url);
+          //alert(file.valueOf());
+        };
+        file.readAsDataURL(this.files[0]);
+        //alert(url);
+      }
+    });  */
+
+    /*
+    var file = "";
+    var fileBtn = document.getElementById('fileBtn');
+    function previewFile(){
+        var preview = document.getElementById('uploadedImg');
+        file = document.querySelector('input[type=file]').files[0];
+        var reader  = new FileReader();
+      
+        reader.addEventListener("load", function () {
+          preview.src = reader.result;
+        }, false);
+      
+        if (file) {
+          reader.readAsDataURL(file);
+        }
+      };*/
+
+    //alert(file.readAsDataURL());
     var comentario = $('#comment').val();
     $('#comment').val("");
-      
+    //alert(file.val());
     var contenedor = $('#post');
-    contenedor.append('<div class="posts row"><div class="col s12 m12 l12"><img id="uploadImg" src="img/no-image.png"' + '<p>' + comentario + '</p><i class= "fa fa-trash trash"></i><i class = "fa fa-heart heart"></i></div></div>');
+    contenedor.append('<div class="posts row"><div class="col s12 m12 l12">' + '<p>' + comentario + '</p><i class= "fa fa-trash trash"></i><i class = "fa fa-heart heart"></i></div></div>');
+
   })
 
   $('#hide').click(function(){
@@ -102,25 +142,11 @@ $(document).ready(function(){
       var overlay = $('.modal-overlay');
       overlay.css('background','transparent');
    // }
-   console.log(mail);
   })
-  var urlLarge = "none";
-  var dataBase = firebase.database().ref('Images');
-  $('#fileBtn').change(function(){
-    if(this.files && this.files[0]){
-      var file = new FileReader();
-      file.onload = function(e){
-        dataBase.push({
-          urlLarge:e.target.result
-        });
-        $('#uploadImg').attr('src',urlLarge)
-      };
-      file.readAsDataURL(this.files[0]);
-    }
+  
+  $('.heart').click(function(){
+    this.css('color','red');
   });
-
-
-
 
 });   
   
