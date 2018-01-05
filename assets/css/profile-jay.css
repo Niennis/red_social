@@ -1,0 +1,20 @@
+
+.cover-page2{
+
+  background-image: url(../img/background3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+}
+.jay{
+  width: 30vh;
+}
+.post-img{
+
+  width: 98%;
+
+}
+
+#jay{
+  width:10vh;
+}

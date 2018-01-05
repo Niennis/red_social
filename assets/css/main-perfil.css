@@ -1,0 +1,21 @@
+
+.cover-page{
+
+  background-image: url(../img/tejido-fondo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  background-position:bottom right;
+}
+.esp{
+  width: 30vh;
+}
+.post-img{
+
+  width: 98%;
+
+}
+
+#esp{
+  width:10vh;
+}

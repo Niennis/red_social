@@ -17,64 +17,31 @@ $(document).ready(function(){
     $('.modal').modal();
   });
 
-  // Obtener elementos para login
-  var txtEmail = document.getElementById('txtEmail');
-  var txtPass = document.getElementById('txtPassword');
-  var btnLogin = document.getElementById('btnLogin');
-  var btnSignUp = document.getElementById('btnSignUp');
-  var btnLogout = document.getElementById('btnLogout');
 
-  btnLogin.addEventListener('click', e => {
-    var email = txtEmail.value;
-    var pass = txtPass.value;
-    var auth = firebase.auth();
-
-    var promise = auth.signInWithEmailAndPassword(email,pass);
-    promise.catch(e => console.log(e.message));
-  });
-
-  btnSignUp.addEventListener('click', e => {
-    var email = txtEmail.value;
-    var pass = txtPass.value;
-    var auth = firebase.auth();
-
-    var  promise = auth.createUserWithEmailAndPassword(email,pass);
-    promise.catch(e => console.log(e.message));
-  });
-
-  btnLogout.addEventListener('click', e => {
-    firebase.auth().signOut();
-  });
-
-  firebase.auth().onAuthStateChanged(firebaseUser => {
-    if(firebaseUser){
-      console.log(firebaseUser);
-      btnLogout.classList.remove('hide');
-    }else{
-      console.log('no logueado');
-      btnLogout.classList.add('hide');
-    }
-  });
 
   //Para subir fotos
+  /*
   var fileBtn = $('#fileBtn');
-
-  var path="";/*
+  var path="";
   fileBtn.change(function(e){
     var file = e.target.files[0];        
     var storageRef = firebase.storage().ref('mis_fotos/' + file.name);
-    var spaceRef = storageRef.child('mis_fotos/' + file.name);
+    var upload = storageRef.put(file);
+    
+    var pathRef = storageRef.child('mis_fotos/' + file.name);
+
     storageRef.child('mis_fotos/' + file.name).getDownloadURL().then(function(url){
       path = url;
     }).catch(function(error) {
 
     });
-    var upload = storageRef.put(file);
+    alert(path);       
+    //var upload = storageRef.put(file);
   });*/
 
   //Para crear un post
 
-  var file = "";
+  /*var file = "";*/
   $('#sendBtn').click(function(){/*
     var uploadedImg = $('<img id="uploadedImg" src="img/no-image.png">');*/
 /*
@@ -115,9 +82,15 @@ $(document).ready(function(){
     //alert(file.readAsDataURL());
     var comentario = $('#comment').val();
     $('#comment').val("");
+    var upImg = $('#upImg').val();
+    $('#upImg').val("");
     //alert(file.val());
     var contenedor = $('#post');
-    contenedor.append('<div class="posts row"><div class="col s12 m12 l12">' + '<p>' + comentario + '</p><i class= "fa fa-trash trash"></i><i class = "fa fa-heart heart"></i></div></div>');
+    if (upImg != ""){
+      contenedor.prepend('<div class="posts row"><div class="col s12 m12 l12"><img class="uploadedImg" src="' + upImg + '"><p>' + comentario + '</p><i class= "fa fa-trash trash"></i><i class = "fa fa-heart heart"></i></div></div>');
+    }else{
+      contenedor.prepend('<div class="posts row"><div class="col s12 m12 l12">' + '<p>' + comentario + '</p><i class= "fa fa-trash trash"></i><i class = "fa fa-heart heart"></i></div></div>');
+    }
 
   })
 
@@ -144,9 +117,15 @@ $(document).ready(function(){
    // }
   })
   
-  $('.heart').click(function(){
-    this.css('color','red');
+  $('.heartBtn').click(function(){
+    $('.heart').css('color','red');
   });
 
+  $('#addedJay').hide();
+  
+  $('#addJay').click(function(){
+    $('#addJay').hide();
+    $('#addedJay').show();
+  })
 });   
   

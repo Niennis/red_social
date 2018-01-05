@@ -1,0 +1,21 @@
+
+.cover-page3{
+
+  background-image: url(../img/backgroundgray.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  background-position:bottom right;
+}
+.grey{
+  width: 30vh;
+}
+.post-img{
+
+  width: 98%;
+
+}
+
+#grey{
+  width:10vh;
+}

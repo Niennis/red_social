@@ -25,11 +25,11 @@
                 <div class="nav-wrapper teal accent-2">
                 <a href="#!" class="brand-logo"><img class="logoImg" src="assets/img/logoLC.png" alt=""></a> 
                   <ul class="right hide-on-med-and-down">
-                    <li><a href="sass.html"><i class="fas fa-home"></i></a></li> <!--Inicio-->
-                    <li><a href="badges.html"><i class="fas fa-heart"></i></a></li> <!--Favoritos-->
-                    <li><a href="collapsible.html"><i class="fas fa-shopping-bag"></i></a></li> <!--Tienda-->
-                    <li><a href="../producto_final/index2.html"><i class="fas fa-user"></i></a></li> <!--Perfil-->
-                    <li><a href="mobile.html"><i class="fas fa-shopping-cart"></i></a></li> <!--Carro-->
+                    <li><a href="#"><i class="fas fa-home"></i></a></li> <!--Inicio-->
+                    <li><a href="#"><i class="fas fa-heart"></i></a></li> <!--Favoritos-->
+                    <li><a href="#"><i class="fas fa-shopping-bag"></i></a></li> <!--Tienda-->
+                    <li><a href="../producto_final/perfil.html"><i class="fas fa-user"></i></a></li> <!--Perfil-->
+                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li> <!--Carro-->
                   </ul>
                 </div>
               </nav>
@@ -77,6 +77,8 @@
       <div class="row">
         <div class="col s10 m8 l6 offset-s1 offset-m2 offset-l3 addPost">
           <textarea class="txt" id="comment" placeholder="Añade un comentario..."></textarea>
+          <textarea class="txt" id="upImg" placeholder="Añade una url..."></textarea>
+          <!--
           <form action="#">
             <div class="file-field input-field">
               <div class="btn">
@@ -87,7 +89,7 @@
                 <input class="file-path validate" type="text" >
               </div>              
             </div>          
-          </form>
+          </form>-->
           <button type="submit" id="sendBtn" class="btn btn-action right">Enviar</button>                      
           <!--New post-->
         </div>
@@ -97,20 +99,27 @@
           <div class="col s10 m8 l6 offset-s1 offset-m2 offset-l3" id="post">
             <div class="row posts">
               <div class="col s12 m12 l12">
-                <div>                  
-                  <img class="circle responsive-img user" src="assets/img/jaymoler.jpg" alt="">
-                  Jay Mohler
+                <div>             
+                  <div class="row">
+                    <div class="col s2 m2 l2">
+                      <a href="../producto_final/profile-jay.html"><img class="circle responsive-img user" src="assets/img/jaymoler.jpg" alt=""></a>                      
+                    </div>
+                    <div class="col s10 m10 l10">
+                      <h5 class="nameUser">Jay Mohler</h5>
+                    </div>
+                  </div>
                 </div>
                 <div>
                   <img class="responsive-img creation" src="assets/img/mohler_09.jpg" alt="">
+                  <p class="description">Última creación. Ya disponible para la venta.</p>
                 </div>
                 <div>
-                  <i class="fa fa-trash trash"></i>
-                  <i class="fa fa-heart heart"></i>
+                  <p class="patternBtn"><i class="fa fa-clipboard pattern"></i></p>
+                  <p class="costBtn"><i class="fa fa-dollar-sign cost"></i></p>                  
+                  <p class="heartBtn"><i class="fa fa-heart heart"></i></p>    
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -128,5 +137,6 @@
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/login.js"></script>
   </body>  
 </html>

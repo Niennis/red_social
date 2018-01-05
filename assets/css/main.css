@@ -67,22 +67,33 @@ h1{
 }
 .user{
   width: 10vh;
+  margin: 2vh 4vh;
+}
+.nameUser{
+  margin: 4vh 0;
 }
 .creation{
   width: 90%;
+  margin: 0 4vh;
+}
+.description{
+  margin: 2vh 4vh;
 }
 .addPost{
   border-radius: 3px;
   border: 1px solid white;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   margin: 2vh auto;
 }
 .uploadedImg{
   width: 100%;
 }
-.trash, .heart{
+.heart, .cost, .pattern{
   float: right;
-  margin: 10px;
+  margin: 0 1vh;
+}
+.pattern{
+  margin-right: 6vh;
 }
 /*INDEX2 PERFIL PRUEBA */
 .img-portada{
