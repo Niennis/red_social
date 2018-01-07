@@ -11,6 +11,10 @@ $(document).ready(function(){
   };
   firebase.initializeApp(config);
   
+  //NavBar collapse
+
+   $(".button-collapse").sideNav();
+
 //MODAL DE LOGIN/REGISTER
   $(document).ready(function(){
     // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
@@ -18,6 +22,46 @@ $(document).ready(function(){
   });
 
 
+
+    
+  // Obtener elementos para login
+  var txtEmail = document.getElementById('txtEmail');
+  var txtPass = document.getElementById('txtPassword');
+  var btnLogin = document.getElementById('btnLogin');
+  var btnSignUp = document.getElementById('btnSignUp');
+  var btnLogout = document.getElementById('btnLogout');
+
+  btnLogin.addEventListener('click', e => {
+    var email = txtEmail.value;
+    var pass = txtPass.value;
+    var auth = firebase.auth();
+
+    var promise = auth.signInWithEmailAndPassword(email,pass);
+    promise.catch(e => console.log(e.message));
+  });
+
+  btnSignUp.addEventListener('click', e => {
+    var email = txtEmail.value;
+    var pass = txtPass.value;
+    var auth = firebase.auth();
+
+    var  promise = auth.createUserWithEmailAndPassword(email,pass);
+    promise.catch(e => console.log(e.message));
+  });
+
+  btnLogout.addEventListener('click', e => {
+    firebase.auth().signOut();
+  });
+
+  firebase.auth().onAuthStateChanged(firebaseUser => {
+    if(firebaseUser){
+      console.log(firebaseUser);
+      btnLogout.classList.remove('hide');
+    }else{
+      console.log('no logueado');
+      btnLogout.classList.add('hide');
+    }
+  });
 
   //Para subir fotos
   /*
@@ -87,9 +131,9 @@ $(document).ready(function(){
     //alert(file.val());
     var contenedor = $('#post');
     if (upImg != ""){
-      contenedor.prepend('<div class="posts row"><div class="col s12 m12 l12"><img class="uploadedImg" src="' + upImg + '"><p>' + comentario + '</p><i class= "fa fa-trash trash"></i><i class = "fa fa-heart heart"></i></div></div>');
+      contenedor.prepend('<div class="posts row"><div class="col s12 m12 l12"><img class="uploadedImg" src="' + upImg + '"><p>' + comentario + '</p><i class= "fa fa-trash trash"></i><i class = "fa fa-heart heart heartPost"></i></div></div>');
     }else{
-      contenedor.prepend('<div class="posts row"><div class="col s12 m12 l12">' + '<p>' + comentario + '</p><i class= "fa fa-trash trash"></i><i class = "fa fa-heart heart"></i></div></div>');
+      contenedor.prepend('<div class="posts row"><div class="col s12 m12 l12">' + '<p>' + comentario + '</p><i class= "fa fa-trash trash"></i><i class = "fa fa-heart heart heartPost"></i></div></div>');
     }
 
   })
@@ -112,8 +156,6 @@ $(document).ready(function(){
     //if(email != "" && pas != ""){
       $('#home').hide();
       $('#newsfeed, #post').show();  
-      var overlay = $('.modal-overlay');
-      overlay.css('background','transparent');
    // }
   })
   
@@ -127,5 +169,6 @@ $(document).ready(function(){
     $('#addJay').hide();
     $('#addedJay').show();
   })
+  
 });   
   

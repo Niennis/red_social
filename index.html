@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="assets/img/logoLC.png"/>
     <title>Lab Craft's</title>
-    <link rel="stylesheet" href="assets/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
@@ -18,18 +18,25 @@
     <header>
       <div class="container-fluid">
         <div class="row ">
-          <div class="col s12 m12">
-            <!--Navbar-->
+          <div class="col s12 m12 l12">
             <div class="navbar-fixed">
               <nav>
                 <div class="nav-wrapper teal accent-2">
-                <a href="#!" class="brand-logo"><img class="logoImg" src="assets/img/logoLC.png" alt=""></a> 
+                  <a href="#!" class="brand-logo"><img class="logoImg" src="assets/img/logoLC.png" alt=""></a>
+                  <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                   <ul class="right hide-on-med-and-down">
                     <li><a href="#"><i class="fas fa-home"></i></a></li> <!--Inicio-->
                     <li><a href="#"><i class="fas fa-heart"></i></a></li> <!--Favoritos-->
                     <li><a href="#"><i class="fas fa-shopping-bag"></i></a></li> <!--Tienda-->
                     <li><a href="../producto_final/perfil.html"><i class="fas fa-user"></i></a></li> <!--Perfil-->
-                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li> <!--Carro-->
+                    <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li> <!--Carro-->                      
+                  </ul>
+                  <ul class="side-nav" id="mobile-demo">
+                      <li><a href="#"><i class="fas fa-home"></i></a></li> <!--Inicio-->
+                      <li><a href="#"><i class="fas fa-heart"></i></a></li> <!--Favoritos-->
+                      <li><a href="#"><i class="fas fa-shopping-bag"></i></a></li> <!--Tienda-->
+                      <li><a href="../producto_final/perfil.html"><i class="fas fa-user"></i></a></li> <!--Perfil-->
+                      <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li> <!--Carro-->  
                   </ul>
                 </div>
               </nav>
@@ -125,9 +132,9 @@
       </div>
     </section>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script> 
-    <script src="assets/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-auth.js"></script>
@@ -137,6 +144,5 @@
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <script src="assets/js/app.js"></script>
-    <script src="assets/js/login.js"></script>
   </body>  
 </html>

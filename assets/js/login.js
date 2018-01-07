@@ -1,3 +1,16 @@
+$(document).ready(function(){ 
+  
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA11xvSCkk7JLjgqr7HlrvPuNiW1yRydok",
+    authDomain: "labcraft-market.firebaseapp.com",
+    databaseURL: "https://labcraft-market.firebaseio.com",
+    projectId: "labcraft-market",
+    storageBucket: "labcraft-market.appspot.com",
+    messagingSenderId: "657357250509"
+  };
+  firebase.initializeApp(config);  
+  
   // Obtener elementos para login
   var txtEmail = document.getElementById('txtEmail');
   var txtPass = document.getElementById('txtPassword');
@@ -36,3 +49,4 @@
       btnLogout.classList.add('hide');
     }
   });
+});

@@ -45,8 +45,8 @@ h1{
 	outline: none;
 }
 .logoImg{
-  height: 10vh;
-  padding: 0 1vh;
+  height: 100%;
+  padding: 0 3vh;
 }
 #newsfeed{
   background-position: center;
@@ -81,14 +81,14 @@ h1{
   background-color: white;
   margin: 2vh auto;
 }
-.heart, .cost, .pattern{
+.heartBtn, .cost, .pattern{
   float: right;
   margin: 0 1vh;
 }
 .pattern{
   margin-right: 6vh;
 }
-.fa-trash, .fa-heart{
+.fa-trash, .heartPost{
   float: right;
   margin: 10px;
 }
