@@ -13,20 +13,64 @@ $(document).ready(function(){
   
   //NavBar collapse
 
-   $(".button-collapse").sideNav();
+   $(".button-collapse").sideNav({
+    menuWidth: 300, // Default is 300
+    edge: 'right', // Choose the horizontal origin
+    closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    draggable: true, // Choose whether you can drag to open on touch screens,
+    onOpen: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is opened
+    onClose: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is closed
+  
+   });
 
 //MODAL DE LOGIN/REGISTER
-  $(document).ready(function(){
-    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
     $('.modal').modal();
+
+/*
+  var txtEmail = $('#txtEmail');
+  var txtPass = $('#txtPassword');
+  var btnLogin = $('#btnLogin');
+  var btnSignUp = $('#btnSignUp');
+  var btnLogout = $('#btnLogout');
+
+    $('#btnLogin').click(e => {
+    var email = txtEmail.value;
+    var pass = txtPass.value;
+    var auth = firebase.auth();
+
+    var promise = auth.signInWithEmailAndPassword(email,pass);
+    promise.catch(e => console.log(e.message));
   });
+
+    $('#btnSignUp').click(e => {
+    var email = txtEmail.value;
+    var pass = txtPass.value;
+    var auth = firebase.auth();
+
+    var  promise = auth.createUserWithEmailAndPassword(email,pass);
+    promise.catch(e => console.log(e.message));
+  });
+
+    $('#btnLogout').click(e => {
+    firebase.auth().signOut();
+  });
+
+  firebase.auth().onAuthStateChanged(firebaseUser => {
+    if(firebaseUser){
+      console.log(firebaseUser);
+      $('#btnLogout').removeClass('hide');
+    }else{
+      console.log('no logueado');
+      $('#btnLogout').addClass('hide');
+    }
+  });*/
    
   // Obtener elementos para login
-  var txtEmail = document.getElementById('txtEmail');
-  var txtPass = document.getElementById('txtPassword');
-  var btnLogin = document.getElementById('btnLogin');
-  var btnSignUp = document.getElementById('btnSignUp');
-  var btnLogout = document.getElementById('btnLogout');
+  var txtEmail = document.getElementById('txtEmail'); // $('#txtEmail');
+  var txtPass = document.getElementById('txtPassword'); // $('#txtPassword');
+  var btnLogin = document.getElementById('btnLogin'); // $('#btnLogin');
+  var btnSignUp = document.getElementById('btnSignUp'); // $('#btnSignUp');
+  var btnLogout = document.getElementById('btnLogout'); // $('#btnLogout');
 
   btnLogin.addEventListener('click', e => {
     var email = txtEmail.value;
@@ -160,7 +204,6 @@ $(document).ready(function(){
   });
 
   $('#addedJay').hide();
-  
   $('#addJay').click(function(){
     $('#addJay').hide();
     $('#addedJay').show();
