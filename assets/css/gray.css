@@ -1,6 +1,17 @@
-
+.row .col {
+  padding: 0;
+}
+.row{
+  margin-bottom: 0;
+}
+.navbarRow{
+  height: 4vh;
+}
+.logoImg{
+  height: 9.8vh;
+  padding: 0 3vh;
+}
 .cover-page3{
-
   background-image: url(../img/backgroundgray.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -11,11 +22,8 @@
   width: 30vh;
 }
 .post-img{
-
   width: 98%;
-
 }
-
 #grey{
   width:10vh;
 }

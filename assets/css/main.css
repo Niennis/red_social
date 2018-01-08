@@ -17,8 +17,11 @@
 .start{
   margin-top: 20%;
 }
+.teal.accent-2.start{
+  background-color: rgba(255, 255, 255, 0.753) !important;
+}
 h1{
-  text-shadow: 1px 1px 2px black; 
+  color: teal;
 }
 .txt {
 	width: 100%;

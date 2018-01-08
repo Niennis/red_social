@@ -20,10 +20,7 @@ $(document).ready(function(){
     // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
     $('.modal').modal();
   });
-
-
-
-    
+   
   // Obtener elementos para login
   var txtEmail = document.getElementById('txtEmail');
   var txtPass = document.getElementById('txtPassword');
@@ -154,8 +151,7 @@ $(document).ready(function(){
   var pass = $('#txtPassword').val();
   $('#btnLogin, #btnSignUp').click(function(){
     //if(email != "" && pas != ""){
-      $('#home').hide();
-      $('#newsfeed, #post').show();  
+      window.location.href = "index2.html"; 
    // }
   })
   

@@ -45,32 +45,50 @@
         </div>
       </div>
     </header>
-    <section id="home" class="container-fluid bg">
+    <section id="newsfeed" class="container-fluid">
       <div class="row">
-        <div class="col s12 m8 l8 offset-m2 offset-l2">
-          <div class="card-panel teal accent-2 start">
-            <h1>Bienvenido</h1>
-            <p>Toda la artesanía del mundo en un solo lugar</p>
-            <p>Mira,compra o aprende con Lab Craft's</p>
-            <br>
-            <div class="row">
-              <div class="col s12 m6 l6">
-                <!-- Modal Login-Register -->
-                <div class="row">
-                  <div class="col s6 m6 l6"><a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login<i class="fas fa-user"></i></a></div>
-                  <div class="col s6 m6 l6"><a class="waves-effect waves-light btn modal-trigger" href="#modal1">Register</a></div>
-                </div>             
-                  <!-- Modal content -->
-                <div id="modal1" class="modal">
-                  <div class="modal-content">                    
-                    <input id="txtEmail" type="email" placeholder="Email">
-                    <input id="txtPassword" type="password" placeholder="Contraseña">
+        <div class="col s10 m8 l6 offset-s1 offset-m2 offset-l3 addPost">
+          <textarea class="txt" id="comment" placeholder="Añade un comentario..."></textarea>
+          <textarea class="txt" id="upImg" placeholder="Añade una url..."></textarea>
+          <!--
+          <form action="#">
+            <div class="file-field input-field">
+              <div class="btn">
+                <span><i class="fa fa-image"></i></span>
+                <input type="file" value="upload" id="fileBtn">
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" >
+              </div>              
+            </div>          
+          </form>-->
+          <button type="submit" id="sendBtn" class="btn btn-action right">Enviar</button>                      
+          <!--New post-->
+        </div>
+      </div>
+      <div>
+        <div class="row">
+          <div class="col s10 m8 l6 offset-s1 offset-m2 offset-l3" id="post">
+            <div class="row posts">
+              <div class="col s12 m12 l12">
+                <div>             
+                  <div class="row">
+                    <div class="col s2 m2 l2">
+                      <a href="../producto_final/profile-jay.html"><img class="circle responsive-img user" src="assets/img/jaymoler.jpg" alt=""></a>                      
+                    </div>
+                    <div class="col s10 m10 l10">
+                      <h5 class="nameUser">Jay Mohler</h5>
+                    </div>
                   </div>
-                  <div class="modal-footer">                    
-                    <button id="btnLogin" class="btn btn-action" >Login</button>
-                    <button id="btnSignUp" class="btn btn-secondary" >Registrar</button>
-                    <button id="btnLogout" class="btn btn-action hide" >Logout</button>
-                  </div>
+                </div>
+                <div>
+                  <img class="responsive-img creation" src="assets/img/mohler_09.jpg" alt="">
+                  <p class="description">Última creación. Ya disponible para la venta.</p>
+                </div>
+                <div>
+                  <p class="patternBtn"><i class="fa fa-clipboard pattern"></i></p>
+                  <p class="costBtn"><i class="fa fa-dollar-sign cost"></i></p>                  
+                  <p class="heartBtn"><i class="fa fa-heart heart"></i></p>    
                 </div>
               </div>
             </div>

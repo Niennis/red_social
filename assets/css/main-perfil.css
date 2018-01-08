@@ -1,4 +1,16 @@
-
+.row .col {
+  padding: 0;
+}
+.row{
+  margin-bottom: 0;
+}
+.navbarRow{
+  height: 4vh;
+}
+.logoImg{
+  height: 9.8vh;
+  padding: 0 3vh;
+}
 .cover-page{
 
   background-image: url(../img/tejido-fondo.jpg);
@@ -11,11 +23,8 @@
   width: 30vh;
 }
 .post-img{
-
   width: 98%;
-
 }
-
 #esp{
   width:10vh;
 }

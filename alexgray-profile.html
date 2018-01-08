@@ -8,8 +8,9 @@
     <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="assets/img/logoLC.png"/>
     <title>Lab Craft's</title>
-    <link rel="stylesheet" href="assets/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/gray.css">
@@ -18,12 +19,12 @@
 
     <header>
       <div class="container-fluid">
-      <div class="row ">
+      <div class="row navbarRow">
         <div class="col s12 m12 l12">
           <!--Navbar-->
           <nav>
             <div class="nav-wrapper teal accent-2">
-             <a href="#!" class="brand-logo">Lab Craft's</a> 
+             <a href="#!" class="brand-logo"><img class="logoImg" src="assets/img/logoLC.png" alt=""></a> 
               <ul class="right hide-on-med-and-down">
                 <li><a href="sass.html"><i class="fas fa-home"></i></a></li> <!--Inicio-->
                 <li><a href="badges.html"><i class="fas fa-heart"></i></a></li> <!--Favoritos-->
@@ -187,24 +188,15 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script> 
-    <script src="assets/js/materialize.min.js"></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> 
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyA11xvSCkk7JLjgqr7HlrvPuNiW1yRydok",
-        authDomain: "labcraft-market.firebaseapp.com",
-        databaseURL: "https://labcraft-market.firebaseio.com",
-        projectId: "labcraft-market",
-        storageBucket: "",
-        messagingSenderId: "657357250509"
-      };
-      firebase.initializeApp(config);
-
-      var holaMundo = document.getElementById('holaMundo');
-      var dbRef = firebase.database().ref().child('text');
-      dbRef.on('value', snap => holaMundo.innerText = snap.val());
-    </script>  
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <script src="assets/js/app.js"></script>
   </body>  
 </html>
