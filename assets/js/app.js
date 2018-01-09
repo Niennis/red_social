@@ -1,15 +1,4 @@
 $(document).ready(function(){ 
-
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyA11xvSCkk7JLjgqr7HlrvPuNiW1yRydok",
-    authDomain: "labcraft-market.firebaseapp.com",
-    databaseURL: "https://labcraft-market.firebaseio.com",
-    projectId: "labcraft-market",
-    storageBucket: "labcraft-market.appspot.com",
-    messagingSenderId: "657357250509"
-  };
-  firebase.initializeApp(config);
   
   //NavBar collapse
 
@@ -24,47 +13,7 @@ $(document).ready(function(){
    });
 
 //MODAL DE LOGIN/REGISTER
-    $('.modal').modal();
-
-/*
-  var txtEmail = $('#txtEmail');
-  var txtPass = $('#txtPassword');
-  var btnLogin = $('#btnLogin');
-  var btnSignUp = $('#btnSignUp');
-  var btnLogout = $('#btnLogout');
-
-    $('#btnLogin').click(e => {
-    var email = txtEmail.value;
-    var pass = txtPass.value;
-    var auth = firebase.auth();
-
-    var promise = auth.signInWithEmailAndPassword(email,pass);
-    promise.catch(e => console.log(e.message));
-  });
-
-    $('#btnSignUp').click(e => {
-    var email = txtEmail.value;
-    var pass = txtPass.value;
-    var auth = firebase.auth();
-
-    var  promise = auth.createUserWithEmailAndPassword(email,pass);
-    promise.catch(e => console.log(e.message));
-  });
-
-    $('#btnLogout').click(e => {
-    firebase.auth().signOut();
-  });
-
-  firebase.auth().onAuthStateChanged(firebaseUser => {
-    if(firebaseUser){
-      console.log(firebaseUser);
-      $('#btnLogout').removeClass('hide');
-    }else{
-      console.log('no logueado');
-      $('#btnLogout').addClass('hide');
-    }
-  });*/
-   
+    $('.modal').modal();   /*
   // Obtener elementos para login
   var txtEmail = document.getElementById('txtEmail'); // $('#txtEmail');
   var txtPass = document.getElementById('txtPassword'); // $('#txtPassword');
@@ -102,31 +51,10 @@ $(document).ready(function(){
       console.log('no logueado');
       btnLogout.classList.add('hide');
     }
-  });
-
-  //Para subir fotos
-  /*
-  var fileBtn = $('#fileBtn');
-  var path="";
-  fileBtn.change(function(e){
-    var file = e.target.files[0];        
-    var storageRef = firebase.storage().ref('mis_fotos/' + file.name);
-    var upload = storageRef.put(file);
-    
-    var pathRef = storageRef.child('mis_fotos/' + file.name);
-
-    storageRef.child('mis_fotos/' + file.name).getDownloadURL().then(function(url){
-      path = url;
-    }).catch(function(error) {
-
-    });
-    alert(path);       
-    //var upload = storageRef.put(file);
   });*/
 
   //Para crear un post
 
-  /*var file = "";*/
   $('#sendBtn').click(function(){/*
     var uploadedImg = $('<img id="uploadedImg" src="img/no-image.png">');*/
 /*
@@ -170,23 +98,24 @@ $(document).ready(function(){
     var upImg = $('#upImg').val();
     $('#upImg').val("");
     //alert(file.val());
-    var contenedor = $('#post');
+    var contenedor = $('#postStatic');
     if (upImg != ""){
-      contenedor.prepend('<div class="posts row"><div class="col s12 m12 l12"><img class="uploadedImg" src="' + upImg + '"><p>' + comentario + '</p><i class= "fa fa-trash trash"></i><i class = "fa fa-heart heart heartPost"></i></div></div>');
+      contenedor.prepend('<div class="posts row"><div class="col s12 m12 l12"><div class="row"><div class="col s3 m2 l2">' + 
+      '<a href="../../perfil.html"><img class="circle responsive-img user" src="assets/img/esperanza-rosas1.jpg" alt=""></a></div>' + '<div class="col s7 m19 l10 offset-s1"><h5 class="nameUser">Esperanza Rosas</h5></div></div>' + '<div><img class="uploadedImg responsive-img creation center-align" src="' + upImg + '"><p class="description">' + comentario + '</p></div>' + '<div><i class="fa fa-clipboard pattern patternBtn"></i>' + '<i class="fa fa-dollar-sign cost costBtn"></i>' + '<i class="fa fa-heart heart heartBtn"></i>' + '</div></div></div></div>');
     }else{
-      contenedor.prepend('<div class="posts row"><div class="col s12 m12 l12">' + '<p>' + comentario + '</p><i class= "fa fa-trash trash"></i><i class = "fa fa-heart heart heartPost"></i></div></div>');
+      contenedor.prepend('<div class="posts row"><div class="col s12 m12 l12"><div class="row"><div class="col s3 m2 l2">' + 
+      '<a href="../../perfil.html"><img class="circle responsive-img user" src="assets/img/esperanza-rosas1.jpg" alt=""></a></div>' + '<div class="col s7 m19 l10 offset-s1"><h5 class="nameUser">Esperanza Rosas</h5></div></div>' + '<div><p class="description">' + comentario + '</p></div>' + '<div><i class="fa fa-clipboard pattern patternBtn"></i>' + '<i class="fa fa-dollar-sign cost costBtn"></i>' + '<i class="fa fa-heart heart heartBtn"></i>' + '</div></div></div></div>');
     }
-
-  })
+  });
 
   $('#hide').click(function(){
     //$('#show').before('<p>Prueba</p>');
     $('h1').hide();
-  })
+  });
   $('#show').click(function(){
     //$('#show').before('<p>Prueba</p>');
     $('h1').show();
-  })
+  });
 
   // Esconder y mostrar páginas
   $('#newsfeed, #post').hide();
@@ -197,10 +126,10 @@ $(document).ready(function(){
     //if(email != "" && pas != ""){
       window.location.href = "index2.html"; 
    // }
-  })
+  });
   
   $('.heartBtn').click(function(){
-    $('.heart').css('color','red');
+    $(this).css('color','red');
   });
 
   $('#addedJay').hide();
