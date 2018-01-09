@@ -101,7 +101,7 @@ $(document).ready(function(){
     var contenedor = $('#postStatic');
     if (upImg != ""){
       contenedor.prepend('<div class="posts row"><div class="col s12 m12 l12"><div class="row"><div class="col s3 m2 l2">' + 
-      '<a href="../../perfil.html"><img class="circle responsive-img user" src="assets/img/esperanza-rosas1.jpg" alt=""></a></div>' + '<div class="col s7 m19 l10 offset-s1"><h5 class="nameUser">Esperanza Rosas</h5></div></div>' + '<div><img class="uploadedImg responsive-img creation center-align" src="' + upImg + '"><p class="description">' + comentario + '</p></div>' + '<div><i class="fa fa-clipboard pattern patternBtn"></i>' + '<i class="fa fa-dollar-sign cost costBtn"></i>' + '<i class="fa fa-heart heart heartBtn"></i>' + '</div></div></div></div>');
+      '<a href="../../perfil.html"><img class="circle responsive-img user" src="assets/img/esperanza-rosas1.jpg" alt=""></a></div>' + '<div class="col s7 m19 l10 offset-s1"><h5 class="nameUser">Esperanza Rosas</h5></div></div>' + '<div><div class="center-align"><img class="uploadedImg responsive-img creation" src="' + upImg + '"></div><p class="description">' + comentario + '</p></div>' + '<div><i class="fa fa-clipboard pattern patternBtn"></i>' + '<i class="fa fa-dollar-sign cost costBtn"></i>' + '<i class="fa fa-heart heart heartBtn"></i>' + '</div></div></div></div>');
     }else{
       contenedor.prepend('<div class="posts row"><div class="col s12 m12 l12"><div class="row"><div class="col s3 m2 l2">' + 
       '<a href="../../perfil.html"><img class="circle responsive-img user" src="assets/img/esperanza-rosas1.jpg" alt=""></a></div>' + '<div class="col s7 m19 l10 offset-s1"><h5 class="nameUser">Esperanza Rosas</h5></div></div>' + '<div><p class="description">' + comentario + '</p></div>' + '<div><i class="fa fa-clipboard pattern patternBtn"></i>' + '<i class="fa fa-dollar-sign cost costBtn"></i>' + '<i class="fa fa-heart heart heartBtn"></i>' + '</div></div></div></div>');
@@ -132,11 +132,13 @@ $(document).ready(function(){
     $(this).css('color','red');
   });
 
+  var friends = $('.friendsNumber').text();
+  console.log(friends);
   $('#addedJay').hide();
   $('#addJay').click(function(){
     $('#addJay').hide();
     $('#addedJay').show();
-  })
-  
+    $('.friendsNumber').text(friends++);
+  });  
 });   
   

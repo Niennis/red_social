@@ -36,7 +36,10 @@ h5{
 	border: none;
   margin: 0 auto;
   resize: none;
-  background-color: white;
+  background-color: #e0f7fa;
+}
+.txt::placeholder{
+  color:rgb(140, 177, 177);
 }
 #sendBtn{
   margin: 2vh;
@@ -54,7 +57,6 @@ h5{
   height: 100%;
   padding: 0 3vh;
 }
-
 .newPost{
   background-image: url(../../assets/img/fabric.jpg);
   background-repeat: no-repeat;
@@ -64,10 +66,9 @@ h5{
   
 }
 .posts{
-  background-color: white;  
-  border: 1px solid teal;
+  background-color: #e0f7fa;  
+  border: 1px solid #e0f7fa;
   border-radius: 3px;
-  margin: 2vh;
 }
 .user{
   width: 10vh;
@@ -78,15 +79,14 @@ h5{
 }
 .creation, .uploadedImg{
   width: 90%;
-  margin: 0 2vh;
 }
 .description{
   margin: 2vh 4vh;
 }
 .addPost{
   border-radius: 3px;
-  border: 1px solid white;
-  background-color: white;
+  border: 1px solid #e0f7fa;
+  background-color: #e0f7fa;
   margin: 2vh auto;
 }
 .heartBtn, .cost, .pattern{
