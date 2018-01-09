@@ -62,8 +62,7 @@ h5{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  
+  background-attachment: fixed;  
 }
 .posts{
   background-color: #e0f7fa;  
@@ -99,6 +98,9 @@ h5{
 .fa-trash, .heartPost{
   float: right;
   margin: 10px;
+}
+#sidenav-overlay{
+  opacity: 0 !important;
 }
 
 

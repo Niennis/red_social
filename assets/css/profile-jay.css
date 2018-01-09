@@ -7,6 +7,9 @@
 .navbarRow{
   height: 4vh;
 }
+#sidenav-overlay{
+  opacity: 0 !important;
+}
 .logoImg{
   height: 9.8vh;
   padding: 0 3vh;

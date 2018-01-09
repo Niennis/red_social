@@ -3,13 +3,7 @@ $(document).ready(function(){
   //NavBar collapse
 
    $(".button-collapse").sideNav({
-    menuWidth: 300, // Default is 300
-    edge: 'right', // Choose the horizontal origin
-    closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-    draggable: true, // Choose whether you can drag to open on touch screens,
-    onOpen: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is opened
-    onClose: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is closed
-  
+     
    });
 
 //MODAL DE LOGIN/REGISTER
@@ -101,10 +95,10 @@ $(document).ready(function(){
     var contenedor = $('#postStatic');
     if (upImg != ""){
       contenedor.prepend('<div class="posts row"><div class="col s12 m12 l12"><div class="row"><div class="col s3 m2 l2">' + 
-      '<a href="../../perfil.html"><img class="circle responsive-img user" src="assets/img/esperanza-rosas1.jpg" alt=""></a></div>' + '<div class="col s7 m19 l10 offset-s1"><h5 class="nameUser">Esperanza Rosas</h5></div></div>' + '<div><div class="center-align"><img class="uploadedImg responsive-img creation" src="' + upImg + '"></div><p class="description">' + comentario + '</p></div>' + '<div><i class="fa fa-clipboard pattern patternBtn"></i>' + '<i class="fa fa-dollar-sign cost costBtn"></i>' + '<i class="fa fa-heart heart heartBtn"></i>' + '</div></div></div></div>');
+      '<a href="perfil.html"><img class="circle responsive-img user" src="assets/img/esperanza-rosas1.jpg" alt=""></a></div>' + '<div class="col s7 m19 l10 offset-s1"><h5 class="nameUser">Esperanza Rosas</h5></div></div>' + '<div><div class="center-align"><img class="uploadedImg responsive-img creation" src="' + upImg + '"></div><p class="description">' + comentario + '</p></div>' + '<div><i class="fa fa-clipboard pattern patternBtn"></i>' + '<i class="fa fa-dollar-sign cost costBtn"></i>' + '<i class="fa fa-heart heart heartBtn"></i>' + '</div></div></div></div>');
     }else{
       contenedor.prepend('<div class="posts row"><div class="col s12 m12 l12"><div class="row"><div class="col s3 m2 l2">' + 
-      '<a href="../../perfil.html"><img class="circle responsive-img user" src="assets/img/esperanza-rosas1.jpg" alt=""></a></div>' + '<div class="col s7 m19 l10 offset-s1"><h5 class="nameUser">Esperanza Rosas</h5></div></div>' + '<div><p class="description">' + comentario + '</p></div>' + '<div><i class="fa fa-clipboard pattern patternBtn"></i>' + '<i class="fa fa-dollar-sign cost costBtn"></i>' + '<i class="fa fa-heart heart heartBtn"></i>' + '</div></div></div></div>');
+      '<a href="perfil.html"><img class="circle responsive-img user" src="assets/img/esperanza-rosas1.jpg" alt=""></a></div>' + '<div class="col s7 m19 l10 offset-s1"><h5 class="nameUser">Esperanza Rosas</h5></div></div>' + '<div><p class="description">' + comentario + '</p></div>' + '<div><i class="fa fa-clipboard pattern patternBtn"></i>' + '<i class="fa fa-dollar-sign cost costBtn"></i>' + '<i class="fa fa-heart heart heartBtn"></i>' + '</div></div></div></div>');
     }
   });
 
@@ -138,7 +132,15 @@ $(document).ready(function(){
   $('#addJay').click(function(){
     $('#addJay').hide();
     $('#addedJay').show();
-    $('.friendsNumber').text(friends++);
+    friends++;
+    $('.friendsNumber').text(friends);
   });  
+
+  $('#addedJay').click(function(){
+    $('#addJay').show();
+    $('#addedJay').hide();
+    friends--;
+    $('.friendsNumber').text(friends);
+  })
 });   
   
