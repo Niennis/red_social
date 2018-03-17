@@ -1,0 +1,19 @@
+{
+  "name": "productofinal",
+  "version": "1.0.0",
+  "description": "producto final red social",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Niennis/red_social.git"
+  },
+  "author": "sofia arevalos y estefania osses",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Niennis/red_social/issues"
+  },
+  "homepage": "https://github.com/Niennis/red_social#readme"
+}

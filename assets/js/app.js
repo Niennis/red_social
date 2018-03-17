@@ -1,10 +1,9 @@
 $(document).ready(function(){ 
   
   //NavBar collapse
+  $(".button-collapse").sideNav({
 
-   $(".button-collapse").sideNav({
-     
-   });
+  });
 
 //MODAL DE LOGIN/REGISTER
     $('.modal').modal();   /*

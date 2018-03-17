@@ -24,12 +24,14 @@
             <nav>
               <div class="nav-wrapper teal accent-2">
                 <a href="#!" class="brand-logo"><img class="logoImg" src="assets/img/logoLC.png" alt=""></a> 
-                <ul class="right hide-on-med-and-down">
-                  <li><a href="../producto_final/index.html"><i class="fas fa-home"></i></a></li> <!--Inicio-->
+                <ul class="right hide-on-med-and-down iconsMenu">
+                  <li><a href="index2.html"><i class="fas fa-home"></i></a></li> <!--Inicio-->
                   <li><a href="#"><i class="fas fa-heart"></i></a></li> <!--Favoritos-->
                   <li><a href="#"><i class="fas fa-shopping-bag"></i></a></li> <!--Tienda-->
-                  <li><a href="../producto_final/perfil.html"><i class="fas fa-user"></i></a></li> <!--Perfil--> 
-                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li> <!--Carro-->
+                  <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li> <!--Carro-->    
+                  <li><a href="#"><i class="fas fa-sign-in-alt" id="btnSignIn"></i></a></li> <!--Signin-->                      
+                  <li><a href="#"><i class="fas fa-sign-out-alt" id="btnLogout"></i></a></li> <!--Signout-->  
+                </ul>
                 <a href="#" data-activates="nav-mobile" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a>
               </div>
             </nav>
@@ -181,14 +183,28 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script> 
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-storage.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-storage.js"></script>    
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <!-- <script src="/__/firebase/init.js"></script> -->
+    <script src="assets/js/login.js"></script>
+    <!-- <script src="assets/js/app.js"></script> -->
+    
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyA11xvSCkk7JLjgqr7HlrvPuNiW1yRydok",
+        authDomain: "labcraft-market.firebaseapp.com",
+        databaseURL: "https://labcraft-market.firebaseio.com",
+        projectId: "labcraft-market",
+        storageBucket: "labcraft-market.appspot.com",
+        messagingSenderId: "657357250509"
+      };
+      firebase.initializeApp(config);
+    </script>
   </body>  
 </html>
